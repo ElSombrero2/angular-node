@@ -7,6 +7,11 @@ const routes: Routes = [
     path: 'app',
     loadChildren: async () => (await import('./home/home.module')).HomeModule
   },
+  {
+    path: '',
+    redirectTo: '/app',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
